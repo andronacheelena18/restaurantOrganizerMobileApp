@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "737063427970",
+    "project_id": "restaurant-organizer-7518e",
+    "storage_bucket": "restaurant-organizer-7518e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737063427970:android:9098912546959f6d90399b",
+        "android_client_info": {
+          "package_name": "com.example.restaurantorg.orgrestaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737063427970-l4vmfl8d2pgqg9aoukucb3bgonb5ljch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7QHDV75MK5mQCtTzSS_s6TQk0-WFXaAs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737063427970-l4vmfl8d2pgqg9aoukucb3bgonb5ljch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

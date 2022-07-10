@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">RestaurantOrganizerApp</string>
+    <string name="order">Vreau sa comand!</string>
+    <string name="staff">Sunt parte din echipa!</string>
+    <string name="username">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="log_in">Log in</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="e_mail">E-mail</string>
+    <string name="name">Name</string>
+    <string name="lv_row_default_value">-</string>
+
+
+    <string name="Item_name">Item name</string>
+    <string name="Item_price">Item price</string>
+    <string name="Item_description">Item Description</string>
+    <string name="item_discount">Item Discount</string>
+    <string name="add_item">Add Item</string>
+    <string name="delete_item">Delete Item</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logout">Log out</string>
+    <string name="todo">TODO</string>
+    <string name="drinks">Drinks</string>
+    <string name="appetizers">Appetizers</string>
+    <string name="food">Food</string>
+    <string name="dessert">Dessert</string>
+    <string name="wine">Wine</string>
+    <string name="food_name">Food Name</string>
+    <string name="food_price">Price</string>
+    <string name="food_description">Food Description</string>
+    <string name="update_menu">Update Menu</string>
+    <string name="desserts">Desserts</string>
+    <string name="action_settings">ActionSettings</string>
+    <string name="menu_home">menu_home</string>
+    <string name="my_profile">My profile</string>
+    <string name="faq">faq</string>
+    <string name="rate_us">Rate us</string>
+    <string name="about_us">About us</string>
+    <string name="contact_us">Contact us</string>
+</resources>
