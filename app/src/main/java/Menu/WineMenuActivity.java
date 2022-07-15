@@ -43,8 +43,9 @@ public class WineMenuActivity extends AppCompatActivity {
                 for(DataSnapshot ds: snapshot.getChildren()) {
                     Item item = ds.getValue(Item.class);
                     if (item != null) {
+
                      Item item1=new Item(item.getId(),item.getName(),item.getPrice(),item.getDescription(),item.getCatid());
-                     itemsList.add(item1);
+                      itemsList.add(item1);
 
 
                     }
