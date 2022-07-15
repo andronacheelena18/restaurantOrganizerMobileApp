@@ -98,7 +98,7 @@
         android:textStyle="normal|bold" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btn_wine"
         android:layout_width="153dp"
         android:layout_height="155dp"
         android:layout_below="@+id/btn_local_food"
