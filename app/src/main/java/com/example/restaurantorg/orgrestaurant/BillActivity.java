@@ -22,6 +22,7 @@ public class BillActivity extends AppCompatActivity {
     ListView listview;
     Button confirmButton;
     private String bills;
+    String tablen;
 
     FirebaseDatabase firebaseDatabase;
     public int ordernum=0;
@@ -41,7 +42,14 @@ public class BillActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance("https://restaurant-organizer-7518e-default-rtdb.europe-west1.firebasedatabase.app/");
         databaseItem = firebaseDatabase.getReference().child("Bills");
         ArrayList<Item> arrayList = new ArrayList<Item>();
+        String str;
         BillAdapter billAdapter = new BillAdapter(this, arrayList);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+             str = extras.getString("key");
+            tablen=str;
+            //The key argument here must match that used in the other activity
+        }
 
         databaseReference = FirebaseDatabase.getInstance("https://restaurant-organizer-7518e-default-rtdb.europe-west1.firebasedatabase.app/").getReference("Bills");
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -51,14 +59,17 @@ public class BillActivity extends AppCompatActivity {
                     Item item = ds.getValue(Item.class);
                     if (item != null) {
                         Item item1 = new Item(item.getId(), item.getName(), item.getPrice(), item.getDescription(), item.getCatid());
-                         item1.setOrderNumber(ordernum);
+                      if(tablen.matches(item.getTableNumber().toString()))
                          arrayList.add(item1);
 
 
 
                     }
 
+
                 }
+
+
 
                 listview.setAdapter(billAdapter);
 

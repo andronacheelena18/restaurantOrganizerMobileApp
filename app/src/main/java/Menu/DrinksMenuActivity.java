@@ -126,9 +126,12 @@ public class DrinksMenuActivity extends AppCompatActivity implements View.OnClic
                 break;
             }
             case R.id.imageButtonDrinks: {
-                startActivity(new Intent(this, BillActivity.class));
-                break;
-            }
+                String str = tableNumber;
+
+                Intent i = new Intent(DrinksMenuActivity.this, BillActivity.class);
+                i.putExtra("key",str);
+                startActivity(i);
+            }break;
 
         }
     }

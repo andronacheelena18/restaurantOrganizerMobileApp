@@ -8,10 +8,10 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    tools:context="Menu.DrinksMenuActivity">
+    tools:context="Menu.DessertMenuActivity">
 
     <Button
-        android:id="@+id/btn_add_to_cart_drinks"
+        android:id="@+id/btn_add_to_cart_desserts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
@@ -20,10 +20,10 @@
         android:text="@string/add_to_cart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerviewDrinks" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerviewDesserts" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerviewDrinks"
+        android:id="@+id/recyclerviewDesserts"
         android:layout_width="348dp"
         android:layout_height="421dp"
         android:layout_marginTop="60dp"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButtonDrinks"
+        android:id="@+id/imageButton_Desserts"
         android:layout_width="62dp"
         android:layout_height="43dp"
         android:layout_marginStart="3dp"
@@ -43,4 +43,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModePasteDrawable" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

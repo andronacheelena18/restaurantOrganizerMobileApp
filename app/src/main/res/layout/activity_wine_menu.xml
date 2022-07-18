@@ -24,8 +24,8 @@
 
  <androidx.recyclerview.widget.RecyclerView
      android:id="@+id/recyclerviewWine"
-     android:layout_width="409dp"
-     android:layout_height="514dp"
+     android:layout_width="352dp"
+     android:layout_height="483dp"
      android:layout_marginTop="60dp"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,8 @@
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:layout_marginStart="7dp"
-     android:layout_marginEnd="357dp"
+
+     android:layout_marginEnd="300dp"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintStart_toStartOf="parent"
      app:layout_constraintTop_toTopOf="parent"

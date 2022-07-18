@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OrgRestaurant">
         <activity
+            android:name="Menu.DessertMenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".TableActivity"
             android:exported="false" />
         <activity

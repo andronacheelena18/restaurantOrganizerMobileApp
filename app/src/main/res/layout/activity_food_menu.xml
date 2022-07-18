@@ -8,8 +8,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerviewFood"
-        android:layout_width="399dp"
-        android:layout_height="504dp"
+        android:layout_width="341dp"
+        android:layout_height="460dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
-        android:layout_marginEnd="361dp"
+        android:layout_marginEnd="300dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerviewFood"
         app:layout_constraintEnd_toEndOf="parent"

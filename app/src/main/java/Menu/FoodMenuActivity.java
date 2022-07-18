@@ -126,9 +126,12 @@ public class FoodMenuActivity extends AppCompatActivity implements View.OnClickL
                 break;
             }
             case R.id.imageButton4: {
-                startActivity(new Intent(this, BillActivity.class));
-                break;
-            }
+                String str = tableNumber;
+
+                Intent i = new Intent(FoodMenuActivity.this, BillActivity.class);
+                i.putExtra("key",str);
+                startActivity(i);
+            }break;
 
         }
     }
