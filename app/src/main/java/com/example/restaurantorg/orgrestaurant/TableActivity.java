@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -78,9 +79,6 @@ public class TableActivity extends AppCompatActivity implements View.OnClickList
 
 
 
-
-
-
     }
 
 
@@ -114,7 +112,9 @@ public class TableActivity extends AppCompatActivity implements View.OnClickList
                     Log.e(TAG, "onCancelled", databaseError.toException());
                 }
             });
-
+            lv.setAdapter(null);
+            Toast.makeText(TableActivity.this, "Order has been delivered", Toast.LENGTH_SHORT).show();
+            finish();
 
 
         }
