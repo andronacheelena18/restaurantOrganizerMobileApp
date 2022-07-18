@@ -43,4 +43,5 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="add_to_cart">Add to Cart</string>
     <string name="confirm">Confirm</string>
+    <string name="table_number">Table Number:</string>
 </resources>

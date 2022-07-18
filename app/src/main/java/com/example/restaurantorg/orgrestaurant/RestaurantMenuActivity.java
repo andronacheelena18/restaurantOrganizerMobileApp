@@ -3,6 +3,7 @@ package com.example.restaurantorg.orgrestaurant;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +17,7 @@ public class RestaurantMenuActivity extends AppCompatActivity implements View.On
   private ImageButton btn_foodMenu;
   private ImageButton btn_drinksMenu;
   private ImageButton btn_WineMenu;
-
+  private EditText etTnumber;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class RestaurantMenuActivity extends AppCompatActivity implements View.On
         btn_drinksMenu.setOnClickListener(this);
         btn_WineMenu=findViewById(R.id.btn_wine);
         btn_WineMenu.setOnClickListener(this);
+        etTnumber=(EditText) findViewById(R.id.et_tabnum);
 
     }
 
@@ -37,14 +39,32 @@ public class RestaurantMenuActivity extends AppCompatActivity implements View.On
 
         switch (v.getId()) {
             case R.id.btn_drinks:
-            { startActivity(new Intent(this, DrinksMenuActivity.class));
-                break;}
+            {  String str = etTnumber.getText().toString();
+
+                Intent i = new Intent(RestaurantMenuActivity.this, DrinksMenuActivity.class);
+                i.putExtra("key",str);
+                startActivity(i);
+            }
             case R.id.btn_local_food:
-            { startActivity(new Intent(this, FoodMenuActivity.class));
-                break;}
+            { TableNumSet();}
+
+
+                break;
             case R.id.btn_wine:
-            { startActivity(new Intent(this, WineMenuActivity.class));
-                break;}
+            {  String str = etTnumber.getText().toString();
+
+                Intent i = new Intent(RestaurantMenuActivity.this, WineMenuActivity.class);
+                i.putExtra("key",str);
+                startActivity(i);
+                }break;
 
         }}
+
+    private void TableNumSet() {
+        String str = etTnumber.getText().toString();
+
+        Intent i = new Intent(RestaurantMenuActivity.this, FoodMenuActivity.class);
+        i.putExtra("key",str);
+        startActivity(i);
+    }
 }

@@ -7,8 +7,30 @@ public class Item implements Serializable {
 
     protected String catid;
     private  boolean isChecked;
+    protected String name;
+    protected String price;
+    protected String description;
+    public String id;
+    private int OrderNumber;
+    private String tableNumber;
+
+    public int getOrderNumber() {
+        return OrderNumber;
+    }
+
+    public void setOrderNumber(int orderNumber) {
+        OrderNumber = orderNumber;
+    }
 
 
+
+    public void setTableNumber(String tableNumber) {
+        this.tableNumber = tableNumber;
+    }
+
+    public String getTableNumber() {
+        return tableNumber;
+    }
 
     private  boolean isChecked()
     {
@@ -20,13 +42,7 @@ public class Item implements Serializable {
 
        isChecked=checked;
     }
-    protected String name;
 
-    protected String price;
-
-    protected String description;
-    public String id;
-    // Discount e in procent
 
 
 

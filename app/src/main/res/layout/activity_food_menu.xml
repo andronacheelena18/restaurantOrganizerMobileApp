@@ -7,9 +7,9 @@
     tools:context="Menu.FoodMenuActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
-        android:layout_width="409dp"
-        android:layout_height="550dp"
+        android:id="@+id/recyclerviewFood"
+        android:layout_width="399dp"
+        android:layout_height="504dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,9 +23,8 @@
         android:text="@string/add_to_cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerview"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerviewFood"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
@@ -35,10 +34,12 @@
         android:layout_marginStart="2dp"
         android:layout_marginEnd="361dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerview"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerviewFood"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="?attr/actionModePasteDrawable" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

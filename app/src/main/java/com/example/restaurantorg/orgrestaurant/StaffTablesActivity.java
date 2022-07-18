@@ -46,17 +46,38 @@ public class StaffTablesActivity extends AppCompatActivity implements View.OnCli
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 switch (position) {
-                    case 0:
-                        startActivity(new Intent(StaffTablesActivity.this, TableActivity.class));
+                    case 0:{ Intent i = new Intent(StaffTablesActivity.this, TableActivity.class);
+                         i.putExtra("key","1");
+                        startActivity(i);}
                         break;
-                    case 1: startActivity(new Intent(StaffTablesActivity.this, TableActivity.class));
-                        break;
+                    case 1:{ Intent i = new Intent(StaffTablesActivity.this, TableActivity.class);
+                        i.putExtra("key","2");
+                        startActivity(i);}
+                         break;
+                    case 2:{ Intent i = new Intent(StaffTablesActivity.this, TableActivity.class);
+                        i.putExtra("key","3");
+                        startActivity(i);}
+                    break;
+                    case 3:{ Intent i = new Intent(StaffTablesActivity.this, TableActivity.class);
+                        i.putExtra("key","4");
+                        startActivity(i);}
+                    break;
+                    case 4:{ Intent i = new Intent(StaffTablesActivity.this, TableActivity.class);
+                        i.putExtra("key","5");
+                        startActivity(i);}
+                    break;
+                    case 5:{ Intent i = new Intent(StaffTablesActivity.this, TableActivity.class);
+                        i.putExtra("key","6");
+                        startActivity(i);}
+                    break;
+
 
 
                 }
             }
         });
     }
+
 
     @Override
     public void onClick(View v) {

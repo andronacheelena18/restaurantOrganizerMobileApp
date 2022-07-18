@@ -22,6 +22,7 @@ public class BillActivity extends AppCompatActivity {
     ListView listview;
     Button confirmButton;
     private String bills;
+
     FirebaseDatabase firebaseDatabase;
     public int ordernum=0;
 
@@ -35,11 +36,13 @@ public class BillActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
         listview = findViewById(R.id.lv_bill);
+
         confirmButton = findViewById(R.id.btn_confirm);
         firebaseDatabase = FirebaseDatabase.getInstance("https://restaurant-organizer-7518e-default-rtdb.europe-west1.firebasedatabase.app/");
         databaseItem = firebaseDatabase.getReference().child("Bills");
         ArrayList<Item> arrayList = new ArrayList<Item>();
         BillAdapter billAdapter = new BillAdapter(this, arrayList);
+
         databaseReference = FirebaseDatabase.getInstance("https://restaurant-organizer-7518e-default-rtdb.europe-west1.firebasedatabase.app/").getReference("Bills");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -48,8 +51,8 @@ public class BillActivity extends AppCompatActivity {
                     Item item = ds.getValue(Item.class);
                     if (item != null) {
                         Item item1 = new Item(item.getId(), item.getName(), item.getPrice(), item.getDescription(), item.getCatid());
-
-                        arrayList.add(item1);
+                         item1.setOrderNumber(ordernum);
+                         arrayList.add(item1);
 
 
 

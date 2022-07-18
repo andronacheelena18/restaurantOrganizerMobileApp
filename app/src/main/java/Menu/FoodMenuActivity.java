@@ -33,6 +33,7 @@ public class FoodMenuActivity extends AppCompatActivity implements View.OnClickL
     private ArrayList<Item> bill;
     private ArrayList<Item> itemsList;
     private Bill billList;
+    private String tableNumber;
     public int orderNumber=0;
     ImageButton img;
     FirebaseDatabase firebaseDatabase;
@@ -45,10 +46,11 @@ public class FoodMenuActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_menu);
-        recyclerView = findViewById(R.id.recyclerview);
+        recyclerView = findViewById(R.id.recyclerviewFood);
         firebaseDatabase = FirebaseDatabase.getInstance("https://restaurant-organizer-7518e-default-rtdb.europe-west1.firebasedatabase.app/");
         databaseItem = firebaseDatabase.getReference().child("Bills");
         button = findViewById(R.id.btn_add_tocart);
+
         img = findViewById(R.id.imageButton4);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
@@ -61,13 +63,28 @@ public class FoodMenuActivity extends AppCompatActivity implements View.OnClickL
         img.setOnClickListener(this);
 
 
+        Intent intent = getIntent();
+        String str;
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+             str= extras.getString("key");
+             tableNumber=str;
+            //The key argument here must match that used in the other activity
+        }
+
+
+
     }
+
+
 
     private void ShowToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
     private void createListData() {
+
         databaseReference = FirebaseDatabase.getInstance("https://restaurant-organizer-7518e-default-rtdb.europe-west1.firebasedatabase.app/").getReference("Items");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -78,7 +95,8 @@ public class FoodMenuActivity extends AppCompatActivity implements View.OnClickL
 
 
                         Item item1 = new Item(item.getId(), item.getName(), item.getPrice(), item.getDescription(), item.getCatid());
-                        if (item.getCatid().matches("103"))
+                        item1.setTableNumber(tableNumber);
+                         if (item.getCatid().matches("103"))
                             itemsList.add(item1);
 
 
@@ -86,6 +104,7 @@ public class FoodMenuActivity extends AppCompatActivity implements View.OnClickL
 
                 }
                 recyclerView.setAdapter(adapter);
+
             }
 
             @Override
@@ -94,6 +113,7 @@ public class FoodMenuActivity extends AppCompatActivity implements View.OnClickL
             }
         });
 
+
     }
 
 
@@ -101,7 +121,8 @@ public class FoodMenuActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_add_tocart: {
-                addToCart();
+                {addToCart();
+                   }
                 break;
             }
             case R.id.imageButton4: {
@@ -117,7 +138,9 @@ public class FoodMenuActivity extends AppCompatActivity implements View.OnClickL
         {
 
             ShowToast(adapter.getSelected().getName());
-            databaseItem.push().setValue(adapter.getSelected(),orderNumber);
+
+            databaseItem.push().setValue(adapter.getSelected());
+
 
         }
         else

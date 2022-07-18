@@ -15,15 +15,15 @@ import com.example.restaurantorg.orgrestaurant.R;
 
 import java.util.ArrayList;
 
-import Menu.WineMenuActivity;
+import Menu.DrinksMenuActivity;
 
-public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
+public class ItemAdapterDrinks extends RecyclerView.Adapter<ItemAdapterDrinks.ItemHolderDrinks> {
 
     private Context context;
     private ArrayList<Item> items;
     private int checkedPosition=0;
 
-    public ItemAdapter(WineMenuActivity context, ArrayList<Item> items) {
+    public ItemAdapterDrinks(DrinksMenuActivity context, ArrayList<Item> items) {
         this.context = context;
         this.items = items;
     }
@@ -36,14 +36,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
     }
     @NonNull
     @Override
-    public ItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ItemHolderDrinks onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.menu_layout_item, parent, false);
-        return new ItemHolder(view);
+        return new ItemHolderDrinks(view);
     }
 
 
     @Override
-    public void onBindViewHolder(@NonNull ItemHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ItemHolderDrinks holder, int position) {
         Item item = items.get(position);
         holder.setDetails(item);
 
@@ -56,11 +56,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
         return items.size();
     }
 
-    class ItemHolder extends RecyclerView.ViewHolder{
+    class ItemHolderDrinks extends RecyclerView.ViewHolder{
         private TextView txtName, txtDescription,txtPrice;
         private ImageView imageView;
 
-        public ItemHolder(@NonNull View itemView) {
+        public ItemHolderDrinks(@NonNull View itemView) {
             super(itemView);
             txtName=itemView.findViewById(R.id.txtName);
             txtDescription=itemView.findViewById(R.id.txtDescription);
