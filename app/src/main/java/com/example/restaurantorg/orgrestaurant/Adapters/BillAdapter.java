@@ -47,7 +47,7 @@ public class BillAdapter extends ArrayAdapter<Item> {
         textView1.setText(currentNumberPosition.getName());
 
         // then according to the position of the view assign the desired TextView 2 for the same
-        TextView textView2 = currentItemView.findViewById(R.id.tvHome);
+        TextView textView2 = currentItemView.findViewById(R.id.tvPrice);
         textView2.setText(currentNumberPosition.getPrice());
 
         // then return the recyclable view

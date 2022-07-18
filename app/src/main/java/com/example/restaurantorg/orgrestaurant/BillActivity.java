@@ -28,9 +28,9 @@ public class BillActivity extends AppCompatActivity {
     public int ordernum=0;
 
     DatabaseReference databaseItem;
+    DatabaseReference databaseItem2;
 
     DatabaseReference databaseReference;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,8 @@ public class BillActivity extends AppCompatActivity {
         confirmButton = findViewById(R.id.btn_confirm);
         firebaseDatabase = FirebaseDatabase.getInstance("https://restaurant-organizer-7518e-default-rtdb.europe-west1.firebasedatabase.app/");
         databaseItem = firebaseDatabase.getReference().child("Bills");
+        databaseItem2 = firebaseDatabase.getReference().child("Orders");
+
         ArrayList<Item> arrayList = new ArrayList<Item>();
         String str;
         BillAdapter billAdapter = new BillAdapter(this, arrayList);
@@ -80,6 +82,7 @@ public class BillActivity extends AppCompatActivity {
 
             }
 
+
         });
 
 
@@ -87,6 +90,18 @@ public class BillActivity extends AppCompatActivity {
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                switch (v.getId()){
+
+                    case R.id.btn_confirm:
+                    {
+                        for (int i = 0; i < billAdapter.getCount(); i++) {
+                            databaseItem2.push().setValue(billAdapter.getItem(i));
+                        }
+                        finish();
+
+                    } break;
+
+                }
 
 
             }
@@ -95,7 +110,9 @@ public class BillActivity extends AppCompatActivity {
 
 
 
+
     }
+
 
 
 

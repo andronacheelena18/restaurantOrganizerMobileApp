@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.restaurantorg.orgrestaurant.Adapters.TableGVAdapter;
 import com.example.restaurantorg.orgrestaurant.Models.Table;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -18,7 +19,7 @@ public class StaffTablesActivity extends AppCompatActivity implements View.OnCli
     GridView tableGV;
     Button updateMenuButton;
     Button logoutButton;
-    Button checkorderButton;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,11 @@ public class StaffTablesActivity extends AppCompatActivity implements View.OnCli
         tableGV = findViewById(R.id.idGVTables);
         updateMenuButton = (Button) findViewById(R.id.button_menu_item);
         updateMenuButton.setOnClickListener(this);
+        logoutButton=findViewById(R.id.btn_log_out);
+        logoutButton.setOnClickListener(this);
+        button= findViewById(R.id.button2);
+        button.setOnClickListener(this);
+
 
 
 
@@ -85,6 +91,14 @@ public class StaffTablesActivity extends AppCompatActivity implements View.OnCli
         switch (v.getId()) {
             case R.id.button_menu_item:
             { startActivity(new Intent(this, AddMenuItemActivity.class));
+                break;}
+            case R.id.btn_log_out:
+            {  FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
+                break;}
+            case R.id.button2:
+            { startActivity(new Intent(this,OrderHistoryActivity.class));
                 break;}
 
         }

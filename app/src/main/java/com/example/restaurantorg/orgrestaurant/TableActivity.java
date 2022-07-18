@@ -30,6 +30,7 @@ public class TableActivity extends AppCompatActivity implements View.OnClickList
     DatabaseReference databaseReference;
     private String tablenr;
     private Button btnOrderDelivered;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,8 +1,11 @@
 package com.example.restaurantorg.orgrestaurant;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +20,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class StaffLoginActivity<spemail, sharedPreferences> extends AppCompatActivity implements View.OnClickListener {
 
@@ -58,6 +62,16 @@ public class StaffLoginActivity<spemail, sharedPreferences> extends AppCompatAct
         }
 
 // Initialize clasaaa Auth
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            // User is signed in
+            Intent i = new Intent(StaffLoginActivity.this, StaffTablesActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(i);
+        } else {
+            // User is signed out
+            Log.d(TAG, "onAuthStateChanged:signed_out");
+        }
 
 
         mAuth = FirebaseAuth.getInstance();
