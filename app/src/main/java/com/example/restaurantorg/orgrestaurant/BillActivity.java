@@ -1,6 +1,5 @@
 package com.example.restaurantorg.orgrestaurant;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +23,7 @@ public class BillActivity extends AppCompatActivity {
     Button confirmButton;
     private String bills;
     FirebaseDatabase firebaseDatabase;
+    public int ordernum=0;
 
     DatabaseReference databaseItem;
 
@@ -52,18 +52,14 @@ public class BillActivity extends AppCompatActivity {
                         arrayList.add(item1);
 
 
+
                     }
 
                 }
 
                 listview.setAdapter(billAdapter);
-                Intent intent = new Intent(BillActivity.this, StaffTablesActivity.class);
-                intent.putExtra("QuestionListExtra", arrayList);
 
-
-
-
-            }
+                      }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -71,6 +67,8 @@ public class BillActivity extends AppCompatActivity {
             }
 
         });
+
+
 
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override

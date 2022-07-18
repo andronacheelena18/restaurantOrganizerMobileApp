@@ -117,7 +117,7 @@ public class FoodMenuActivity extends AppCompatActivity implements View.OnClickL
         {
 
             ShowToast(adapter.getSelected().getName());
-            databaseItem.push().setValue(adapter.getSelected());
+            databaseItem.push().setValue(adapter.getSelected(),orderNumber);
 
         }
         else

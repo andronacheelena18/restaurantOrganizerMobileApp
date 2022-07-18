@@ -17,9 +17,13 @@ public class TableActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
         lv=findViewById(R.id.lv_table);
+        ArrayList<Item> arrayList=new ArrayList<>();
 
-        ArrayList<Item> mylist = (ArrayList<Item>)getIntent().getSerializableExtra("QuestionListExtra");
-        BillAdapter billAdapter = new BillAdapter(this,(ArrayList<Item>) mylist);
+        BillAdapter billAdapter = new BillAdapter(this,(ArrayList<Item>) arrayList);
         lv.setAdapter(billAdapter);
+
     }
+
+
+
 }

@@ -7,6 +7,9 @@ public class Item implements Serializable {
 
     protected String catid;
     private  boolean isChecked;
+
+
+
     private  boolean isChecked()
     {
 
@@ -79,4 +82,7 @@ public class Item implements Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
+
+
 }
