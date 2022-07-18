@@ -13,7 +13,6 @@ import com.example.restaurantorg.orgrestaurant.Models.Item;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -67,8 +66,7 @@ public class AddMenuItemActivity extends AppCompatActivity {
         item.setDescription(description);
         item.setPrice(price);
         item.setCatid(cod);
-        ArrayList<String> commentList = new ArrayList<>();
-        commentList.add("null");
+
 
         Map<String, Object> foodMap = new HashMap<>();
         foodMap.put("foodName",foodName);

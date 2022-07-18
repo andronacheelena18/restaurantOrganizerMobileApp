@@ -1,11 +1,22 @@
 package com.example.restaurantorg.orgrestaurant.Models;
 
 
-public class Item  {
+import java.io.Serializable;
+
+public class Item implements Serializable {
 
     protected String catid;
+    private  boolean isChecked;
+    private  boolean isChecked()
+    {
 
+        return  isChecked;
+    }
+    private  void setChecked(boolean checked)
+    {
 
+       isChecked=checked;
+    }
     protected String name;
 
     protected String price;

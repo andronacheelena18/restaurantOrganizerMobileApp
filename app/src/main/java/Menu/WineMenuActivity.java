@@ -30,6 +30,7 @@ public class WineMenuActivity extends AppCompatActivity {
         recyclerView=findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         itemsList= new ArrayList<>();
+
         adapter=new ItemAdapter(this,itemsList);
         recyclerView.setAdapter(adapter);
         createListData();
@@ -44,7 +45,9 @@ public class WineMenuActivity extends AppCompatActivity {
                     Item item = ds.getValue(Item.class);
                     if (item != null) {
 
+
                      Item item1=new Item(item.getId(),item.getName(),item.getPrice(),item.getDescription(),item.getCatid());
+                        if(item.getCatid().matches("105"))
                       itemsList.add(item1);
 
 
