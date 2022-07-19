@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -75,6 +76,8 @@ public class AddMenuItemActivity extends AppCompatActivity {
         foodMap.put("foodCode", cod);
 
         databaseItem.push().setValue(item);
+        Toast.makeText(AddMenuItemActivity.this, "Item added to menu", Toast.LENGTH_SHORT).show();
+        finish();
     }
 
 

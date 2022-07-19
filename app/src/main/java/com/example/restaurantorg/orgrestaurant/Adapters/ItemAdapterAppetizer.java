@@ -15,15 +15,15 @@ import com.example.restaurantorg.orgrestaurant.R;
 
 import java.util.ArrayList;
 
-import Menu.WineMenuActivity;
+import Menu.AppetizerMenuActivity;
 
-public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
+public class ItemAdapterAppetizer extends RecyclerView.Adapter<ItemAdapterAppetizer.ItemHolderAppetizer> {
 
     private Context context;
     private ArrayList<Item> items;
     private int checkedPosition=0;
 
-    public ItemAdapter(WineMenuActivity context, ArrayList<Item> items) {
+    public ItemAdapterAppetizer(AppetizerMenuActivity context, ArrayList<Item> items) {
         this.context = context;
         this.items = items;
     }
@@ -36,14 +36,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
     }
     @NonNull
     @Override
-    public ItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ItemHolderAppetizer onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.menu_layout_item, parent, false);
-        return new ItemHolder(view);
+        return new ItemHolderAppetizer(view);
     }
 
 
     @Override
-    public void onBindViewHolder(@NonNull ItemHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ItemHolderAppetizer holder, int position) {
         Item item = items.get(position);
         holder.setDetails(item);
 
@@ -56,16 +56,16 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
         return items.size();
     }
 
-    class ItemHolder extends RecyclerView.ViewHolder{
+    class ItemHolderAppetizer extends RecyclerView.ViewHolder{
         private TextView txtName, txtDescription,txtPrice;
         private ImageView imageView;
 
-        public ItemHolder(@NonNull View itemView) {
+        public ItemHolderAppetizer(@NonNull View itemView) {
             super(itemView);
             txtName=itemView.findViewById(R.id.txtName);
             txtDescription=itemView.findViewById(R.id.txtDescription);
             txtPrice=itemView.findViewById(R.id.txtPrice);
-             imageView=itemView.findViewById(R.id.imageView);
+            imageView=itemView.findViewById(R.id.imageView);
             itemView.setOnClickListener(new View.OnClickListener(){
 
 
@@ -79,10 +79,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
 
                 }
             });
-        }
-        int getPrices(){
-
-            return Integer.parseInt(txtPrice.toString());
         }
         void bind(final Item item){
             if(checkedPosition==-1)

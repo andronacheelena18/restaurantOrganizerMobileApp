@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import Menu.AppetizerMenuActivity;
 import Menu.DessertMenuActivity;
 import Menu.DrinksMenuActivity;
 import Menu.FoodMenuActivity;
@@ -19,8 +20,9 @@ public class RestaurantMenuActivity extends AppCompatActivity implements View.On
   private ImageButton btn_drinksMenu;
   private ImageButton btn_WineMenu;
   private ImageButton btn_dessertsMenu;
-
+  private ImageButton btn_appetizersMenu;
   private EditText etTnumber;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,8 @@ public class RestaurantMenuActivity extends AppCompatActivity implements View.On
         btn_WineMenu.setOnClickListener(this);
         btn_dessertsMenu=findViewById(R.id.imageButtonDessert);
         btn_dessertsMenu.setOnClickListener(this);
+        btn_appetizersMenu=findViewById(R.id.btn_snack);
+        btn_appetizersMenu.setOnClickListener(this);
         etTnumber=(EditText) findViewById(R.id.et_tabnum);
 
     }
@@ -70,7 +74,15 @@ public class RestaurantMenuActivity extends AppCompatActivity implements View.On
                 Intent i = new Intent(RestaurantMenuActivity.this, DessertMenuActivity.class);
                 i.putExtra("key",str);
                 startActivity(i);
-            }
+            }break;
+            case R.id.btn_snack:
+            {  String str = etTnumber.getText().toString();
+
+                Intent i = new Intent(RestaurantMenuActivity.this, AppetizerMenuActivity.class);
+                i.putExtra("key",str);
+                startActivity(i);
+            }break;
+
 
         }}
 

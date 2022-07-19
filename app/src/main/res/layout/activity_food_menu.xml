@@ -8,13 +8,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerviewFood"
-        android:layout_width="341dp"
-        android:layout_height="460dp"
+        android:layout_width="419dp"
+        android:layout_height="476dp"
+        android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_add_tocart"
@@ -23,20 +22,21 @@
         android:text="@string/add_to_cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerviewFood"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.38" />
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="68dp"
+        android:layout_height="52dp"
         android:layout_marginStart="2dp"
         android:layout_marginEnd="300dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerviewFood"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"

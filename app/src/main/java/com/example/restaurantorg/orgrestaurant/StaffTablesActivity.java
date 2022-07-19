@@ -2,6 +2,8 @@ package com.example.restaurantorg.orgrestaurant;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -103,5 +105,29 @@ public class StaffTablesActivity extends AppCompatActivity implements View.OnCli
 
         }
     }
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
 
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId()) {
+            case R.id.message:
+                startActivity(new Intent(this,OrderHistoryActivity.class));
+                return true;
+
+            case R.id.picture:
+                finish();
+                return (true);
+
+
+
+
+
+
+        }
+        return (super.onOptionsItemSelected(item));
+    }
 }

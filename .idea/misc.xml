@@ -6,14 +6,15 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_add_menu.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_add_menu_item.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_appetizer_menu.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_bill.xml" value="0.264" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_dessert_menu.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_drinks_menu.xml" value="0.1" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_food_menu.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_dessert_menu.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_drinks_menu.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_food_menu.xml" value="0.287905604719764" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_lv_row_bill.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_main2.xml" value="0.18796296296296297" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_order_history.xml" value="0.1175925925925926" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_order_history.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_restaurant_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/activity_staff_login.xml" value="0.25416666666666665" />
@@ -36,7 +37,8 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/lv_row_view.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/lvorderhistory.xml" value="0.264" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/menu.xml" value="0.264" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/menu_layout_item.xml" value="0.2469806763285024" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/menu_layout_item.xml" value="0.264" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/menu_main.xml" value="0.14907407407407408" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/row_item.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/simple_list_item_1.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/layout/table1.xml" value="0.17552083333333332" />
@@ -44,6 +46,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/menu/bottom_navigation.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/menu/food_menu_navigation_drawer.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/menu/food_menu_options.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/OrgRestaurant/app/src/main/res/menu/menu.xml" value="0.14907407407407408" />
       </map>
     </option>
   </component>

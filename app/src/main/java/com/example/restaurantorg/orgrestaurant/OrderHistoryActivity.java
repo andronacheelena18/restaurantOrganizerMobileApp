@@ -3,6 +3,7 @@ package com.example.restaurantorg.orgrestaurant;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,8 @@ public class OrderHistoryActivity extends AppCompatActivity implements View.OnCl
     RecyclerView recyclerView;
     private OrderAdapter adapter;
     private Button button;
+    int total;
+    TextView tv;
 
     private ArrayList<Item> itemsList;
 
@@ -46,9 +49,13 @@ public class OrderHistoryActivity extends AppCompatActivity implements View.OnCl
         itemsList = new ArrayList<>();
         adapter = new OrderAdapter(this, itemsList);
         recyclerView.setAdapter(adapter);
+        tv=findViewById(R.id.tv_total_earn);
         createListData();
 
+
     }
+
+
 
     private void createListData() {
         databaseReference = FirebaseDatabase.getInstance("https://restaurant-organizer-7518e-default-rtdb.europe-west1.firebasedatabase.app/").getReference("Orders");
@@ -59,13 +66,20 @@ public class OrderHistoryActivity extends AppCompatActivity implements View.OnCl
                     Item item = ds.getValue(Item.class);
                     if (item != null) {
                         Item item1 = new Item(item.getId(), item.getName(), item.getPrice(), item.getDescription(), item.getCatid());
-
-                            itemsList.add(item1);
+                           itemsList.add(item1);
 
 
                     }
 
                 }
+
+
+                    for (int i = 0; i < itemsList.size(); i++)
+                    {
+                        total= total+Integer.parseInt(itemsList.get(i).getPrice());
+                    }
+                    tv.setText(String.valueOf(total)+"  lei ");
+
                 recyclerView.setAdapter(adapter);
 
             }
@@ -76,10 +90,13 @@ public class OrderHistoryActivity extends AppCompatActivity implements View.OnCl
             }
         });
 
+
     }
 
     @Override
     public void onClick(View v) {
 
     }
+
+
 }

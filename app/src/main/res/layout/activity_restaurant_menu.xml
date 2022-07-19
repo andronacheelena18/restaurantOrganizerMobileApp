@@ -148,7 +148,10 @@
             android:id="@+id/et_tabnum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/table_number" />
+            android:backgroundTint="#FBF1F1"
+            android:hint="@string/table_number"
+            android:textColor="#1B1616"
+            android:textColorHint="#090707" />
     </com.google.android.material.textfield.TextInputLayout>
 
 

@@ -8,10 +8,10 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    tools:context="Menu.DrinksMenuActivity">
+    tools:context="Menu.AppetizerMenuActivity">
 
     <Button
-        android:id="@+id/btn_add_to_cart_drinks"
+        android:id="@+id/btn_add_to_cart_appetizers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
@@ -21,28 +21,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerviewDrinks" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerviewAppetizers" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerviewDrinks"
-        android:layout_width="412dp"
-        android:layout_height="462dp"
-        android:layout_marginTop="76dp"
+        android:id="@+id/recyclerviewAppetizers"
+        android:layout_width="423dp"
+        android:layout_height="472dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButtonDrinks"
+        android:id="@+id/imageButton_Appetizers"
         android:layout_width="62dp"
         android:layout_height="43dp"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModePasteDrawable" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

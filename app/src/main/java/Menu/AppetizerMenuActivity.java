@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.restaurantorg.orgrestaurant.Adapters.ItemAdapterDesserts;
+import com.example.restaurantorg.orgrestaurant.Adapters.ItemAdapterAppetizer;
 import com.example.restaurantorg.orgrestaurant.BillActivity;
 import com.example.restaurantorg.orgrestaurant.Models.Bill;
 import com.example.restaurantorg.orgrestaurant.Models.Item;
@@ -26,9 +26,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class DessertMenuActivity extends AppCompatActivity implements View.OnClickListener {
+public class AppetizerMenuActivity extends AppCompatActivity implements View.OnClickListener {
     RecyclerView recyclerView;
-    private ItemAdapterDesserts adapter;
+    private ItemAdapterAppetizer adapter;
     private Button button;
     private ArrayList<Item> bill;
     private ArrayList<Item> itemsList;
@@ -45,18 +45,18 @@ public class DessertMenuActivity extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dessert_menu);
-        recyclerView = findViewById(R.id.recyclerviewDesserts);
+        setContentView(R.layout.activity_appetizer_menu);
+        recyclerView = findViewById(R.id.recyclerviewAppetizers);
         firebaseDatabase = FirebaseDatabase.getInstance("https://restaurant-organizer-7518e-default-rtdb.europe-west1.firebasedatabase.app/");
         databaseItem = firebaseDatabase.getReference().child("Bills");
-        button = findViewById(R.id.btn_add_to_cart_desserts);
+        button = findViewById(R.id.btn_add_to_cart_appetizers);
 
-        img = findViewById(R.id.imageButton_Desserts);
+        img = findViewById(R.id.imageButton_Appetizers);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         itemsList = new ArrayList<>();
         bill = new ArrayList<>();
-        adapter = new ItemAdapterDesserts(this, itemsList);
+        adapter = new ItemAdapterAppetizer(this, itemsList);
         recyclerView.setAdapter(adapter);
         createListData();
         button.setOnClickListener(this);
@@ -96,7 +96,7 @@ public class DessertMenuActivity extends AppCompatActivity implements View.OnCli
 
                         Item item1 = new Item(item.getId(), item.getName(), item.getPrice(), item.getDescription(), item.getCatid());
                         item1.setTableNumber(tableNumber);
-                        if (item.getCatid().matches("104"))
+                        if (item.getCatid().matches("101"))
                             itemsList.add(item1);
 
 
@@ -120,15 +120,15 @@ public class DessertMenuActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_add_to_cart_desserts: {
+            case R.id.btn_add_to_cart_appetizers:s: {
                 {addToCart();
                 }
                 break;
             }
-            case R.id.imageButton_Desserts: {
+            case R.id.imageButton_Appetizers:s: {
                 String str = tableNumber;
 
-                Intent i = new Intent(DessertMenuActivity.this, BillActivity.class);
+                Intent i = new Intent(AppetizerMenuActivity.this, BillActivity.class);
                 i.putExtra("key",str);
                 startActivity(i);
             }
